@@ -50,7 +50,6 @@ function onYouTubeIframeAPIReady() {
           track.find('.sign-pause').css('display', 'inline-block')
             console.log('resume à' + ' ' + player.getCurrentTime())
         }
-
       } else {
         player.pauseVideo()
         track.attr('playing', false);
