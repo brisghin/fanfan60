@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+:root {
+  --black: #111111;
+  --white: #ffffff;
+  --pink: #FFCCCC;
+  --red: #FC1313;
+  --light-red: #ff3232;
+  --light-gray: #F4F4F4;
+  --teal: #008080;
+}
+
+html, body {
+  position: relative;
+  overflow-x: hidden;
+}
+html ::selection, body ::selection {
+  background: transparent;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background: #ffe1e1;
+  background: radial-gradient(circle, #ffe1e1 0%, #ffcccc 81%);
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: default;
+}
+body h1 {
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 63px;
+  text-align: center;
+  margin: 70px 0 110px 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--red);
+  cursor: pointer;
+}
+body h1.bonus {
+  margin: 100px 0 0 0;
+}
+body h1.bonus:hover {
+  -webkit-text-fill-color: var(--red);
+}
+body h1 a {
+  text-decoration: none;
+  outline: none;
+}
+body h1 a:hover {
+  -webkit-text-fill-color: var(--red);
+}
+body main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .grid-index {
+  display: grid;
+  width: 1080px;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 40px;
+  column-gap: 40px;
+}
+body main .grid-index a, body main .grid-index a:visited {
+  color: var(--black);
+  text-decoration: none;
+  outline: none;
+}
+body main .grid-index .cat {
+  max-width: 520px;
+  height: 280px;
+  background: var(--light-gray);
+  transition: background 0.5s, color 0.5s;
+  border: 2px solid var(--light-red);
+  cursor: pointer;
+}
+body main .grid-index .cat span {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 20px;
+  color: var(--black);
+  padding: 0 10px;
+  background: var(--light-gray);
+  border-bottom: solid 2px var(--light-red);
+  border-right: solid 2px var(--light-red);
+}
+body main .grid-index .cat div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 230px;
+}
+body main .grid-index .cat p {
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+  font-size: 26px;
+  text-align: center;
+}
+body main .track {
+  grid-column: 1/span 2;
+  width: 740px;
+  justify-self: center;
+  margin: 0 0 60px 0;
+}
+body main .track .inline-player {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .track .inline-player span {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Rubik Mono One", sans-serif;
+  font-size: 20px;
+  color: var(--black);
+}
+body main .track .inline-player .icones svg {
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+body main .track .inline-player .icones svg:hover path.sign-play, body main .track .inline-player .icones svg:hover path.sign-pause, body main .track .inline-player .icones svg:hover path.sign-stop {
+  fill: var(--teal);
+}
+body main .track .inline-player .icones svg path {
+  fill: var(--black);
+  fill-stroke: var(--black);
+}
+body main .track .inline-player .icones svg path.sign-pause {
+  display: none;
+  fill: var(--teal);
+  stroke: var(--teal);
+}
+body main .track hr {
+  border: 1px solid var(--light-red);
+  transition: border 2.5s;
+}
+body main .track .eye {
+  margin-top: 10px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+body main .track .eye:hover {
+  opacity: 0.4;
+}
+body main .track .eye .line-eye {
+  display: none;
+}
+body main .track .eye .line-eye.visible {
+  display: block;
+}
+body main .track .track-content {
+  display: none;
+  min-height: 300px;
+}
+body main .track .track-content.visible {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+body main .track .track-content.visible p {
+  font-size: 18px;
+}
+body main .track .track-content.visible p span {
+  font-size: 17px;
+}
+body main .track .track-content.visible img {
+  max-width: 300px;
+}
+body main .spacer {
+  margin-top: 90px;
+  width: 100vw;
+  padding: 1px 0;
+}
+body main #player {
+  display: none;
+  z-index: 0;
+  opacity: 0;
+}
+
+@media (max-width: 1150px) {
+  body main .grid-index {
+    width: 950px;
+    row-gap: 35px;
+    column-gap: 35px;
+  }
+  body main .grid-index .cat {
+    max-width: 470px;
+    height: 260px;
+  }
+  body main .grid-index .cat p {
+    font-size: 24px;
+  }
+  body main .track {
+    width: 740px;
+  }
+  body main .track .track-content.visible p {
+    font-size: 17px;
+  }
+  body main .track .track-content.visible p span {
+    font-size: 16px;
+  }
+  body main .track .track-content.visible img {
+    max-width: 300px;
+  }
+}
+@media (max-width: 1000px) {
+  body h1 {
+    font-size: 60px;
+  }
+  body main .grid-index {
+    width: 600px;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    column-gap: 0;
+  }
+  body main .grid-index .cat {
+    max-width: 600px;
+  }
+  body main .track {
+    width: 650px;
+  }
+  body main .track .track-content {
+    min-height: 250px;
+  }
+  body main .track .track-content.visible p {
+    font-size: 16px;
+  }
+  body main .track .track-content.visible p span {
+    font-size: 16px;
+  }
+  body main .track .track-content.visible img {
+    max-width: 240px;
+  }
+}
+@media (max-width: 800px) {
+  body main .track {
+    width: 600px;
+  }
+  body main .track .track-content {
+    min-height: 200px;
+  }
+  body main .track .track-content.visible p {
+    font-size: 15px;
+  }
+  body main .track .track-content.visible p span {
+    font-size: 15px;
+  }
+  body main .track .track-content.visible img {
+    max-width: 220px;
+  }
+}
+@media (max-width: 670px) {
+  body h1 {
+    font-size: 50px;
+  }
+  body main .grid-index {
+    width: 500px;
+  }
+  body main .grid-index .cat {
+    max-width: 500px;
+  }
+  body main .grid-index .cat p {
+    font-size: 20px;
+  }
+  body main .track {
+    width: 500px;
+  }
+  body main .track .track-content {
+    min-height: 200px;
+  }
+  body main .track .track-content.visible p {
+    font-size: 15px;
+  }
+  body main .track .track-content.visible p span {
+    font-size: 15px;
+  }
+  body main .track .track-content.visible img {
+    max-width: 220px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
