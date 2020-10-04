@@ -24,13 +24,12 @@ barba.init({
           translateY: 250,
           duration: 0,
           easing: 'easeInOutSine',
-          complete: function() { resolve() }
+          complete: function() { window.scrollTo({ top: 0, behavior: 'smooth' }), resolve() }
         })
       })
     },
     enter({ next }) {
       return new Promise(resolve => {
-        window.scrollTo({ top: 0, behavior: 'smooth' })
         anime({
           targets: next.container,
           opacity: 1,
