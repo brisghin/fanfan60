@@ -1,7 +1,9 @@
+// transition.js
 $('body').scrollTop({
   top: 0
 })
 
+// player.js
 const playTrack = (track, id, volume, delay) => {
   track.click(function() {
     resetIcones()
