@@ -28,8 +28,8 @@ function onYouTubeIframeAPIReady() {
     track.click(function() {
       resetIcones()
 
-      if (track.attr('playing') === false) {
-        if (track.attr('started') === false) {
+      if (track.attr('playing') == 'false') {
+        if (track.attr('started') == 'false') {
           resetAttributes()
           player.loadVideoById({'videoId': id, 'startSeconds': delay})
           player.setVolume(volume)
