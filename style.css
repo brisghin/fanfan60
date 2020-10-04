@@ -284,5 +284,13 @@ body main #player {
     max-width: 220px;
   }
 }
+@media (max-width: 580px) {
+  body h1 {
+    font-size: 50px;
+  }
+  body main {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
