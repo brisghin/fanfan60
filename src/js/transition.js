@@ -17,6 +17,9 @@ barba.init({
       })
     },
     beforeEnter ({ next }) {
+      // scrollTop
+      $('body').animate({scrollTop:0});
+      // position +250px
       return new Promise(resolve => {
         anime({
           targets: next.container,
@@ -29,8 +32,6 @@ barba.init({
       })
     },
     enter({ next }) {
-      $('body').animate({scrollTop:0});
-      // window.scrollTo({ top: 0, behavior: 'smooth' });
       return new Promise(resolve => {
         anime({
           targets: next.container,
