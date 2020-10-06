@@ -158,10 +158,10 @@ $(document).ready(function() {
             easing: 'easeInOutSine',
             complete: function() { resolve() }
           })
+          initHover()
+          initEye()
+          onYouTubeIframeAPIReady()
         })
-        initHover()
-        initEye()
-        onYouTubeIframeAPIReady()
       },
       enter({ next }) {
         return new Promise(resolve => {
