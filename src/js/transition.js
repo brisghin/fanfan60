@@ -29,7 +29,7 @@ barba.init({
       })
     },
     enter({ next }) {
-      $('document').scrollTop();
+      $('body').animate({scrollTop:1200},'50');
       return new Promise(resolve => {
         anime({
           targets: next.container,
