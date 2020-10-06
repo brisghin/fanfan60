@@ -30,7 +30,8 @@ $(document).ready(function() {
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
   let player;
-  function onYouTubeIframeAPIReady() {
+  // function onYouTubeIframeAPIReady() {
+  function initPlayer() {
     let player = new YT.Player('player', { height: '360', width: '640' })
 
     const resetIcones = () => {
@@ -162,6 +163,7 @@ $(document).ready(function() {
             complete: function() { resolve() }
           })
         })
+
       },
       enter({ next }) {
         return new Promise(resolve => {
@@ -173,10 +175,15 @@ $(document).ready(function() {
             easing: 'easeInOutSine',
             complete: function() { resolve() }
           })
-          initHover()
-          onYouTubeIframeAPIReady()
-          initEye()
         })
+      }
+    }],
+    views:  [{
+      namespace: 'index',
+      beforeEnter() {
+        initHover()
+        initEye()
+        initPlayer()
       }
     }]
   })
