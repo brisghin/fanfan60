@@ -1,4 +1,4 @@
-$(document).ready(function() {
+// $(document).ready(function() {
 
   // For index carts hover effect
   const initHover = function() {
@@ -180,4 +180,4 @@ $(document).ready(function() {
       }
     }]
   })
-})
+// })
