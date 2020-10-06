@@ -11,7 +11,6 @@ $(document).ready(function() {
       $(this).css('color', 'var(--black)')
     })
   }
-  // initHover()
 
   // For eyes click
   const initEye = function() {
@@ -20,7 +19,6 @@ $(document).ready(function() {
       $(this).next('.track-content').toggleClass('visible')
     })
   }
-  // initEye()
 
   // For player: https://developers.google.com/youtube/iframe_api_reference
   let tag = document.createElement('script');
@@ -30,8 +28,7 @@ $(document).ready(function() {
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
   let player;
-  // function onYouTubeIframeAPIReady() {
-  function initPlayer() {
+  function onYouTubeIframeAPIReady() {
     let player = new YT.Player('player', { height: '360', width: '640' })
 
     const resetIcones = () => {
@@ -130,7 +127,6 @@ $(document).ready(function() {
       stopTrack()
     })
   }
-  // onYouTubeIframeAPIReady()
 
   // For barba + anime: https://barba.js.org/ + https://animejs.com/documentation/
   barba.init({
@@ -176,14 +172,6 @@ $(document).ready(function() {
             complete: function() { resolve() }
           })
         })
-      }
-    }],
-    views:  [{
-      namespace: 'index',
-      beforeEnter() {
-        initHover()
-        initEye()
-        initPlayer()
       }
     }]
   })
