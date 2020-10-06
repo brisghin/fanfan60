@@ -1,4 +1,4 @@
-// $(document).ready(function() {
+$(document).ready(function() {
 
   // For index carts hover effect
   const initHover = function() {
@@ -11,7 +11,7 @@
       $(this).css('color', 'var(--black)')
     })
   }
-  initHover()
+  // initHover()
 
   // For eyes click
   const initEye = function() {
@@ -20,7 +20,7 @@
       $(this).next('.track-content').toggleClass('visible')
     })
   }
-  initEye()
+  // initEye()
 
   // For player: https://developers.google.com/youtube/iframe_api_reference
   let tag = document.createElement('script');
@@ -129,7 +129,7 @@
       stopTrack()
     })
   }
-  onYouTubeIframeAPIReady()
+  // onYouTubeIframeAPIReady()
 
   // For barba + anime: https://barba.js.org/ + https://animejs.com/documentation/
   barba.init({
@@ -180,4 +180,4 @@
       }
     }]
   })
-// })
+})
