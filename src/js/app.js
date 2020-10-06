@@ -159,7 +159,9 @@ $(document).ready(function() {
             complete: function() { resolve() }
           })
         })
-
+        initHover()
+        initEye()
+        onYouTubeIframeAPIReady()
       },
       enter({ next }) {
         return new Promise(resolve => {
