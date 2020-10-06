@@ -29,7 +29,7 @@ barba.init({
       })
     },
     enter({ next }) {
-      $('body').animate({
+      $('window').animate({
         top: 0,
       }, 1500, 'linear')
       return new Promise(resolve => {
