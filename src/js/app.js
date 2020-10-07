@@ -184,9 +184,9 @@ $(document).ready(function() {
       }
     }]
   })
-})
 
-// Helps init function when reload
-initHover()
-initEye()
-onYouTubeIframeAPIReady()
+  // Helps init function when reload
+  initHover()
+  initEye()
+  onYouTubeIframeAPIReady()
+})
