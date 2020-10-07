@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   // For index carts hover effect
-  const initHover = function() {
+  function initHover() {
     $('.cat').mouseenter(function() {
       $(this).css({
         background : 'var(--light-red)',
@@ -17,7 +17,7 @@ $(document).ready(function() {
   }
 
   // For eyes click
-  const initEye = function() {
+  function initEye() {
     $('.eye').click(function() {
       $(this).find('.line-eye').toggleClass('visible')
       $(this).next('.track-content').toggleClass('visible')
@@ -25,13 +25,7 @@ $(document).ready(function() {
   }
 
   // For player: https://developers.google.com/youtube/iframe_api_reference
-  // let tag = document.createElement('script');
-  // tag.src = "https://www.youtube.com/iframe_api";
-  //
-  // let firstScriptTag = document.getElementsByTagName('script')[0];
-  // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-  let player;
+  // let player;
   function onYouTubeIframeAPIReady() { // function name important
     let player = new YT.Player('player', { height: '360', width: '640' })
 
