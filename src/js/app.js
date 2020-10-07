@@ -10,7 +10,7 @@ $(document).ready(function() {
     })
     $('.cat').mouseleave(function() {
       $(this).css({
-        background : 'var(--teal)',
+        background : 'var(--light-grey)',
         color : 'var(--black)'
       })
     })
