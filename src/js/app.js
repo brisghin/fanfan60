@@ -25,7 +25,7 @@ $(document).ready(function() {
 
   // For player: https://developers.google.com/youtube/iframe_api_reference
   function onYouTubeIframeAPIReady() { // function name important
-    let player = new YT.Player('player', { height: '360', width: '640' })
+    let player = new YT.Player('player', {height: '360', width: '640', events: {'onStateChange': onStateChange}})
 
     const resetIcones = () => {
       $('.sign-play').css('display', 'inline-block')
@@ -40,11 +40,6 @@ $(document).ready(function() {
       resetAttributes()
       player.stopVideo()
         console.log('stop')
-    }
-    const trackEnded = () => {
-      resetIcones()
-      resetAttributes()
-        console.log('ended')
     }
     const playTrack = (track, id, volume, delay) => {
       track.click(function() {
@@ -122,13 +117,19 @@ $(document).ready(function() {
     $('.play37').click(playTrack($('.play37'), 'zPwMdZOlPo8', 90, 0));
     $('.play38').click(playTrack($('.play38'), 'Y-vj8V522OQ', 90, 0));
     $('.play39').click(playTrack($('.play39'), 'Omnpu8mzX4c', 85, 0));
-    $('.play40').click(playTrack($('.play40'), 'ZEcqHA7dbwM', 85, 0));
+    $('.play40').click(playTrack($('.play40'), 'ZEcqHA7dbwM', 80, 0));
 
     $('.stop').click(function() {
       stopTrack()
     })
 
-    player.addEventListener(YT.PlayerState.ENDED, trackEnded())
+    function onStateChange(event) {
+      if (event.data == YT.PlayerState.ENDED) {
+        resetIcones()
+        resetAttributes()
+          console.log('ended')
+      }
+    }
   }
 
   // For barba + anime: https://barba.js.org/ + https://animejs.com/documentation/
