@@ -45,8 +45,6 @@ $(document).ready(function() {
       track.click(function() {
         resetIcones()
 
-        $(this).animate({scrollTop:20});
-
         if (track.attr('playing') == 'false') {
           if (track.attr('started') == 'false') {
             resetAttributes()
