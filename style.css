@@ -102,9 +102,9 @@ body main .grid-index .cat p {
 }
 body main .track {
   grid-column: 1/span 2;
-  width: 740px;
+  width: 720px;
   justify-self: center;
-  margin: 0 0 60px 0;
+  margin: 0 0 80px 0;
 }
 body main .track .inline-player {
   display: flex;
@@ -154,7 +154,6 @@ body main .track .eye .line-eye.visible {
 }
 body main .track .track-content {
   display: none;
-  min-height: 300px;
 }
 body main .track .track-content.visible {
   display: flex;
