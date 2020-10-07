@@ -32,14 +32,16 @@ $(document).ready(function() {
       $('.sign-pause').css('display', 'none')
     }
     const resetAttributes = () => {
-      $('.play').attr('playing', false);
-      $('.play').attr('started', false);
+      $('.play').attr({
+        playing: false,
+        started: false
+      });
     }
     const stopTrack = () => {
       resetIcones()
       resetAttributes()
       player.stopVideo()
-        console.log('stop')
+        // console.log('stop')
     }
     const playTrack = (track, id, volume, delay) => {
       track.click(function() {
@@ -51,28 +53,29 @@ $(document).ready(function() {
             player.loadVideoById({'videoId': id, 'startSeconds': delay})
             player.setVolume(volume)
             player.playVideo()
-            track.attr('playing', true)
-            track.attr('started', true);
+            track.attr({
+              playing: true,
+              started: true
+            });
 
             track.find('.sign-play').css('display', 'none')
             setTimeout(function(){
               track.find('.sign-pause').css('display', 'inline-block')
             }, 1500);
-              console.log('load and play + addClass started')
-              console.log('volume is:' + ' ' + volume)
+              // console.log('load and play w/ volume at:' + ' ' + volume')
           } else {
             player.playVideo()
             track.attr('playing', true)
             track.find('.sign-play').css('display', 'none')
             track.find('.sign-pause').css('display', 'inline-block')
-              console.log('resume à' + ' ' + player.getCurrentTime())
+              // console.log('resume à' + ' ' + player.getCurrentTime())
           }
         } else {
           player.pauseVideo()
           track.attr('playing', false);
           track.find('.sign-play').css('display', 'inline-block')
           track.find('.sign-pause').css('display', 'none')
-            console.log('pause à' + ' ' + player.getCurrentTime())
+            // console.log('pause à' + ' ' + player.getCurrentTime())
         }
         track.closest('.inline-player').next('hr').css('border', '1px solid var(--teal)')
       })
@@ -127,7 +130,7 @@ $(document).ready(function() {
       if (event.data == YT.PlayerState.ENDED) {
         resetIcones()
         resetAttributes()
-          console.log('ended')
+          // console.log('ended')
       }
     }
   }
@@ -181,9 +184,9 @@ $(document).ready(function() {
       }
     }]
   })
-
-  // Helps init function when reload
-  initHover()
-  initEye()
-  onYouTubeIframeAPIReady()
 })
+
+// Helps init function when reload
+initHover()
+initEye()
+onYouTubeIframeAPIReady()
