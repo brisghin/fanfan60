@@ -5,7 +5,7 @@
   --pink: #FFCCCC;
   --red: #FC1313;
   --light-red: #ff3232;
-  --light-gray: #F4F4F4;
+  --light-grey: #F4F4F4;
   --teal: #008080;
 }
 
@@ -73,7 +73,7 @@ body main .grid-index a, body main .grid-index a:visited {
 body main .grid-index .cat {
   max-width: 520px;
   height: 280px;
-  background: var(--light-gray);
+  background: var(--light-grey);
   transition: background 0.5s, color 0.5s;
   border: 2px solid var(--light-red);
   cursor: pointer;
@@ -84,7 +84,7 @@ body main .grid-index .cat span {
   font-size: 20px;
   color: var(--black);
   padding: 0 10px;
-  background: var(--light-gray);
+  background: var(--light-grey);
   border-bottom: solid 2px var(--light-red);
   border-right: solid 2px var(--light-red);
 }
