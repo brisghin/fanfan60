@@ -3,12 +3,17 @@ $(document).ready(function() {
   // For index carts hover effect
   const initHover = function() {
     $('.cat').mouseenter(function() {
-      $(this).css('background', 'var(--light-red)')
+      $(this).css({
+        background : 'var(--light-red)',
+        color : 'var(--white)'
+      }),
       $(this).css('color', 'var(--white)')
     })
     $('.cat').mouseleave(function() {
-      $(this).css('background', 'var(--light-gray)')
-      $(this).css('color', 'var(--black)')
+      $(this).css({
+        background : 'var(--light-grey)',
+        color : 'var(--black)'
+      })
     })
   }
 
@@ -28,7 +33,7 @@ $(document).ready(function() {
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
   let player;
-  function onYouTubeIframeAPIReady() {
+  function onYouTubeIframeAPIReady() { // function name important
     let player = new YT.Player('player', { height: '360', width: '640' })
 
     const resetIcones = () => {
