@@ -6,8 +6,7 @@ $(document).ready(function() {
       $(this).css({
         background : 'var(--light-red)',
         color : 'var(--white)'
-      }),
-      $(this).css('color', 'var(--white)')
+      })
     })
     $('.cat').mouseleave(function() {
       $(this).css({
