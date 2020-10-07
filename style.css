@@ -170,8 +170,7 @@ body main .track .track-content.visible p span {
 }
 body main .track .track-content.visible img {
   max-width: 300px;
-  border-bottom: 2px solid var(--teal);
-  border-right: 2px solid var(--teal);
+  box-shadow: 2px 2px 3px 1px rgba(255, 19, 19, 0.1);
 }
 body main .spacer {
   margin-top: 90px;
