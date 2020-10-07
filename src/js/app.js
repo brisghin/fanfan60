@@ -10,7 +10,7 @@ $(document).ready(function() {
     })
     $('.cat').mouseleave(function() {
       $(this).css({
-        background : 'var(--light-grey)',
+        background : 'var(--teal)',
         color : 'var(--black)'
       })
     })
@@ -183,7 +183,9 @@ $(document).ready(function() {
   })
 
   // init function when reload
-  initHover()
-  initEye()
-  onYouTubeIframeAPIReady()
+  if (location.reload()) {
+    initHover()
+    initEye()
+    onYouTubeIframeAPIReady()
+  }
 })
