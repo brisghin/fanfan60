@@ -183,9 +183,7 @@ $(document).ready(function() {
   })
 
   // init function when reload
-  if (location.reload()) {
-    initHover()
-    initEye()
-    onYouTubeIframeAPIReady()
-  }
+  initHover()
+  initEye()
+  onYouTubeIframeAPIReady()
 })
