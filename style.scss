@@ -182,16 +182,13 @@ body {
 
         .line-eye {
           display: none;
-          &.visible {
-            display: block;
-          }
         }
       }
 
       .track-content {
         display: none;
 
-        &.visible {
+        .flex-wrapper {
           display: flex;
           flex-direction: row;
           justify-content: space-between;

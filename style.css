@@ -149,25 +149,22 @@ body main .track .eye:hover {
 body main .track .eye .line-eye {
   display: none;
 }
-body main .track .eye .line-eye.visible {
-  display: block;
-}
 body main .track .track-content {
   display: none;
 }
-body main .track .track-content.visible {
+body main .track .track-content .flex-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-body main .track .track-content.visible p {
+body main .track .track-content .flex-wrapper p {
   font-size: 17px;
 }
-body main .track .track-content.visible p span {
+body main .track .track-content .flex-wrapper p span {
   font-size: 17px;
 }
-body main .track .track-content.visible img {
+body main .track .track-content .flex-wrapper img {
   max-width: 300px;
   box-shadow: 2px 2px 3px 1px rgba(255, 19, 19, 0.1);
 }

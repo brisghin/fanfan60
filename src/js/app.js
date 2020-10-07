@@ -18,8 +18,8 @@ $(document).ready(function() {
   // For eyes click
   function initEye() {
     $('.eye').click(function() {
-      $(this).find('.line-eye').toggleClass('visible')
-      $(this).next('.track-content').toggleClass('visible')
+      $(this).find('.line-eye').toggle()
+      $(this).next('.track-content').slideToggle()
     })
   }
 
