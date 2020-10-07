@@ -125,8 +125,7 @@ body {
 
     .track {
       grid-column: 1 / span 2;
-      // width: 640px;
-      width: 720px;
+      width: 720px; // or 640?
       justify-self: center;
       margin: 0 0 80px 0;
 
