@@ -41,6 +41,11 @@ $(document).ready(function() {
       player.stopVideo()
         console.log('stop')
     }
+    const trackEnded = () => {
+      resetIcones()
+      resetAttributes()
+        console.log('ended')
+    }
     const playTrack = (track, id, volume, delay) => {
       track.click(function() {
         resetIcones()
@@ -123,11 +128,7 @@ $(document).ready(function() {
       stopTrack()
     })
 
-    if (YT.PlayerState.ENDED) {
-      resetIcones()
-      resetAttributes()
-        console.log('ended')
-    }
+    player.addEventListener(YT.PlayerState.ENDED, trackEnded())
   }
 
   // For barba + anime: https://barba.js.org/ + https://animejs.com/documentation/
