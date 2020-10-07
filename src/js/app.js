@@ -122,6 +122,12 @@ $(document).ready(function() {
     $('.stop').click(function() {
       stopTrack()
     })
+
+    if (YT.PlayerState.ENDED) {
+      resetIcones()
+      resetAttributes()
+        console.log('ended')
+    }
   }
 
   // For barba + anime: https://barba.js.org/ + https://animejs.com/documentation/
