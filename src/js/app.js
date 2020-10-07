@@ -26,13 +26,13 @@ $(document).ready(function() {
 
   // For player: https://developers.google.com/youtube/iframe_api_reference
   let player;
-  let tag = document.createElement('script');
-  tag.src = "https://www.youtube.com/iframe_api";
-
-  let firstScriptTag = document.getElementsByTagName('script')[0];
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
   function onYouTubeIframeAPIReady() { // function name important
+    let tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
     let player = new YT.Player('player', { height: '360', width: '640' })
 
     const resetIcones = () => {
@@ -162,9 +162,9 @@ $(document).ready(function() {
             easing: 'easeInOutSine',
             complete: function() { resolve() }
           })
-          // initHover()
-          // initEye()
-          // onYouTubeIframeAPIReady()
+          initHover()
+          initEye()
+          onYouTubeIframeAPIReady()
         })
       },
       enter({ next }) {
@@ -182,7 +182,7 @@ $(document).ready(function() {
     }]
   })
 
-  // init function when reload
+  // helps init function when reload
   initHover()
   initEye()
   onYouTubeIframeAPIReady()
