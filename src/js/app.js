@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   // For index carts hover effect
   function initHover() {
     $('.cat').mouseenter(function() {
@@ -25,7 +24,6 @@ $(document).ready(function() {
   }
 
   // For player: https://developers.google.com/youtube/iframe_api_reference
-  // let player;
   function onYouTubeIframeAPIReady() { // function name important
     let player = new YT.Player('player', { height: '360', width: '640' })
 
@@ -176,7 +174,7 @@ $(document).ready(function() {
     }]
   })
 
-  // helps init function when reload
+  // Helps init function when reload
   initHover()
   initEye()
   onYouTubeIframeAPIReady()
