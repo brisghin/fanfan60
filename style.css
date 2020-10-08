@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 :root {
   --black: #111111;
   --white: #ffffff;

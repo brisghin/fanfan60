@@ -1,5 +1,4 @@
 $(function(){
-    console.log('doc ready')
   function iC() {
     $('.cat')
       .mouseenter(function() {
@@ -140,7 +139,6 @@ $(function(){
       name: 'fadeAndMove',
       once() {
         $('body').css('opacity', 1)
-          console.log('body fadeIn')
       },
       leave({ current }) {
         return new Promise(resolve => {
