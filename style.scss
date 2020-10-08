@@ -53,17 +53,10 @@ body {
 
     cursor: pointer;
 
-    &.bonus {
-      margin: 100px 0 0 0;
-      &:hover {
-        -webkit-text-fill-color: var(--red);
-      }
-    }
-
     a {
       text-decoration: none;
       outline: none;
-
+      
       &:hover {
         -webkit-text-fill-color: var(--red);
       }
