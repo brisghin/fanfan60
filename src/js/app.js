@@ -6,7 +6,7 @@ $(function(){
           background : 'var(--light-red)',
           color : 'var(--white)'
         })
-      }),
+      })
       .mouseleave(function() {
         $(this).css({
           background : 'var(--light-grey)',
@@ -18,7 +18,7 @@ $(function(){
   function iE() {
     $('.eye').click(function() {
       $(this)
-        .find('.line-eye').toggle(),
+        .find('.line-eye').toggle()
         .next('.track-content').slideToggle()
     })
   }
