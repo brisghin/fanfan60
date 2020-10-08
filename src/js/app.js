@@ -17,9 +17,8 @@ $(function(){
 
   function iE() {
     $('.eye').click(function() {
-      $(this)
-        .find('.line-eye').toggle()
-        .next('.track-content').slideToggle()
+      $(this).find('.line-eye').toggle()
+      $(this).next('.track-content').slideToggle()
     })
   }
 
