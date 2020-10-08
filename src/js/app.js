@@ -134,7 +134,6 @@ $(function(){
     }
   }
 
-  // For barba + anime: https://barba.js.org/ + https://animejs.com/documentation/
   barba.init({
     debug: true,
     transitions: [{
@@ -152,9 +151,7 @@ $(function(){
         })
       },
       beforeEnter ({ next }) {
-        // scrollTop
         $('body').animate({scrollTop:0});
-        // position +250px
         return new Promise(resolve => {
           anime({
             targets: next.container,
