@@ -10,8 +10,8 @@
 }
 
 html, body {
-  position: relative !important;
-  overflow-x: hidden !important;
+  position: relative;
+  overflow-x: hidden;
 }
 html ::selection, body ::selection {
   background: transparent;
