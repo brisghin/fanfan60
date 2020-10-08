@@ -1,4 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap");
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 :root {
   --black: #111111;
   --white: #ffffff;
@@ -27,6 +35,7 @@ body {
   font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   cursor: default;
+  animation: fadeIn 1.5s;
 }
 body h1 {
   font-family: "Rubik Mono One", sans-serif;
