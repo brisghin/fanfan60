@@ -1,29 +1,28 @@
-$(document).ready(function() {
-  // For index carts hover effect
-  function initHover() {
-    $('.cat').mouseenter(function() {
-      $(this).css({
-        background : 'var(--light-red)',
-        color : 'var(--white)'
+$(function(){
+  function iC() {
+    $('.cat')
+      .mouseenter(function() {
+        $(this).css({
+          background : 'var(--light-red)',
+          color : 'var(--white)'
+        })
+      }),
+      .mouseleave(function() {
+        $(this).css({
+          background : 'var(--light-grey)',
+          color : 'var(--black)'
+        })
       })
-    })
-    $('.cat').mouseleave(function() {
-      $(this).css({
-        background : 'var(--light-grey)',
-        color : 'var(--black)'
-      })
-    })
   }
 
-  // For eyes click
-  function initEye() {
+  function iE() {
     $('.eye').click(function() {
-      $(this).find('.line-eye').toggle()
-      $(this).next('.track-content').slideToggle()
+      $(this)
+        .find('.line-eye').toggle(),
+        .next('.track-content').slideToggle()
     })
   }
 
-  // For player: https://developers.google.com/youtube/iframe_api_reference
   function onYouTubeIframeAPIReady() { // function name important
     let player = new YT.Player('player', {height: '360', width: '640', events: {'onStateChange': onStateChange}})
 
@@ -165,8 +164,8 @@ $(document).ready(function() {
             easing: 'easeInOutSine',
             complete: function() { resolve() }
           })
-          initHover()
-          initEye()
+          iC()
+          iE()
           onYouTubeIframeAPIReady()
         })
       },
@@ -185,8 +184,7 @@ $(document).ready(function() {
     }]
   })
 
-  // Helps init function when reload
-  initHover()
-  initEye()
+  iC()
+  iE()
   onYouTubeIframeAPIReady()
 })
