@@ -3,14 +3,14 @@ $(function(){
     $('.cat')
       .mouseenter(function() {
         $(this).css({
-          background : 'var(--light-red)',
-          color : 'var(--white)'
+          background: 'var(--light-red)',
+          color: 'var(--white)'
         })
       })
       .mouseleave(function() {
         $(this).css({
-          background : 'var(--light-grey)',
-          color : 'var(--black)'
+          background: 'var(--light-grey)',
+          color: 'var(--black)'
         })
       })
   }
