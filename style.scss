@@ -45,7 +45,8 @@ body {
   -webkit-font-smoothing: antialiased;
   cursor: default;
 
-  animation: fadeIn 1.5s;
+  opacity: 0;
+  transition: opacity 1.5s;
 
   h1 {
     font-family: 'Rubik Mono One', sans-serif;

@@ -137,6 +137,9 @@ $(function(){
     debug: true,
     transitions: [{
       name: 'fadeAndMove',
+      once() {
+        $('body').css('opacity', 1)
+      },
       leave({ current }) {
         return new Promise(resolve => {
           anime({
