@@ -1,18 +1,17 @@
 $(function(){
   function iC() {
-    $('.cat')
-      .mouseenter(function() {
-        $(this).css({
-          background: 'var(--light-red)',
-          color: 'var(--white)'
-        })
+    $('.cat').mouseenter(function() {
+      $(this).css({
+        background: 'var(--light-red)',
+        color: 'var(--white)'
       })
-      .mouseleave(function() {
-        $(this).css({
-          background: 'var(--light-grey)',
-          color: 'var(--black)'
-        })
+    })
+    $('.cat').mouseleave(function() {
+      $(this).css({
+        background: 'var(--light-grey)',
+        color: 'var(--black)'
       })
+    })
   }
 
   function iE() {
